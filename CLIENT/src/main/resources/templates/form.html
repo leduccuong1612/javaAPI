@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Form</title>
+	<link rel="stylesheet" th:href="@{/css/bootstrap.css}" />
+</head>
+<body>
+	<div class="container">
+		<hr />
+		<h3>Directory</h3>
+		<hr />
+		<p class="h4 mb-4">Save</p>
+		<form action="#" th:action="@{/save}" th:object="${item}" method="POST">
+			<input type="hidden" th:field="*{masv}" />
+			<input type="text" th:field="*{hoten}" class="form-control mb-4 col-4" placeholder=""/>
+			<input type="text" th:field="*{tenkhoa}" class="form-control mb-4 col-4" placeholder=""/>
+			<input type="text" th:field="*{gioitinh}" class="form-control mb-4 col-4" placeholder=""/>
+			<input type="text" th:field="*{diemtin}" class="form-control mb-4 col-4" placeholder=""/>
+			<button type="submit" class="btn btn-info col-2">Save</button>			
+		</form>
+		<hr />
+		<a th:href="@{/}">Back</a>
+	</div>
+</html>
